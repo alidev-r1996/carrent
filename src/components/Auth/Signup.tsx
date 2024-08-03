@@ -57,7 +57,7 @@ const Signup: FC<LoginPrps> = ({ setStep, step }) => {
         </p>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col gap-4 text-[10px] mt-8"
+          className="flex flex-col gap-4 text-[10px] mt-8 w-2/3"
         >
           <InputText
             register={register}

@@ -54,8 +54,8 @@ const Detail = () => {
           variants={childVariants}
           className="md:text-sm text-xs text-slate-400 my-4"
         >
-          NISMO has become the embodiment of Nissan's outstanding performance,
-          inspired by the most unforgiving proving ground, the "race track".
+          NISMO has become the embodiment of Nissans outstanding performance,
+          inspired by the most unforgiving proving ground, the race track.
         </motion.p>
         <motion.div variants={childVariants}>
           <TableUi

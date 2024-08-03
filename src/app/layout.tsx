@@ -4,11 +4,6 @@ import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-main transition-colors duration-200">
-      <body className={`${sora.className}`}>
+      <body className={``}>
         <Header />
           {children}
         <Footer />

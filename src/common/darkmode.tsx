@@ -26,7 +26,7 @@ const DarkMode = () => {
     ) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
-      setDark("dark")
+      setDark("dark");
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.removeItem("theme");

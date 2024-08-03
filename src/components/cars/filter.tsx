@@ -31,7 +31,7 @@ const Filter = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-3 items-center">
+    <div className="flex flex-col md:flex-row gap-3 items-center mt-4">
       <div className="bg-header flex-1 flex flex-col gap-10 rounded shadow p-2 w-full">
         <h2 className="font-bold p-2 text-white text-center bg-blue-500 rounded shadow-[0_0_3px_rgb(59,130,246)]">
           Pick-Up

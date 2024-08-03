@@ -5,7 +5,6 @@ import { FaEnvelope, FaLock } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import { FC } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { z } from "zod";
 import InputText from "@/common/Input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import SocialLogin from "./SocialLogin";
@@ -41,7 +40,7 @@ const Login: FC<LoginPrps> = ({ setStep, step }) => {
         </p>
         <form
           onClick={handleSubmit(onSubmit)}
-          className="flex flex-col gap-4 text-[10px] mt-8"
+          className="flex flex-col gap-4 text-[10px] mt-8 w-2/3"
         >
           <InputText
             register={register}
@@ -87,7 +86,7 @@ const Login: FC<LoginPrps> = ({ setStep, step }) => {
           Welcome!
         </h1>
         <p className="absolute bottom-20 z-10 text-white text-xs">
-          don't have an account?{" "}
+          dont have an account?
         </p>
         <button
           onClick={() => setStep(!step)}

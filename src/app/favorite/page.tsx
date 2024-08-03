@@ -13,7 +13,7 @@ const Page = async () => {
         {carsData
           .filter((i) => i.isLike)
           .map((car) => {
-            return <CarCard {...car} />;
+            return <CarCard {...car} key={car.id}/>;
           })}
       </div>
     </div>

@@ -5,7 +5,9 @@ const Page = async() => {
 
 
   return (
-    <Auth />
+    <div>
+      <Auth />
+    </div>
   );
 };
 
