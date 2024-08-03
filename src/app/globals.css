@@ -2,32 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  &,
+  &.light {
+    --main-bg: 241 245 249;
+    --header-bg: 255 255 255;
+    --text-header: 30 41 59;
+    --icon-color: 100 116 139;
+    --bg-color: 255 255 255;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  &.dark {
+    --main-bg: 17 24 39;
+    --header-bg: 36 42 56;
+    --text-header: 255 255 255;
+    --icon-color: 255 255 255;
+    --bg-color: ;
+    
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .containerBlur:hover .childBlur:not(:hover) {
+    filter: blur(1px);
   }
+  .containerBlur:hover .childBlur {
+    filter: blur(0);
+  }
+}
+
+@layer components {
+  .filterTitle {
+    @apply relative before:w-2 font-bold before:h-2 ml-7 before:bg-blue-600 before:absolute before:-left-4 before:rounded-full before:ring-blue-400 before:ring-offset-2 before:ring-2 before:top-2.5;
+  }
+}
+
+body,html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  overscroll-behavior: none;
 }
