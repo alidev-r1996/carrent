@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { findUserByEmail, users } from "@/utils/users";
 import { NextRequest, NextResponse } from "next/server";
-import { decrypt } from "@/utils/auth";
+import { decrypt } from "@/lib/auth";
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const { id, user } = await req.json();
