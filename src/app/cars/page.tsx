@@ -3,7 +3,7 @@ import BreadCrump from "@/common/breadcrump";
 import { Suspense } from "react";
 import AllCars from "@/components/cars/allcars";
 
-
+export const dynamic = 'force-dynamic'
 const Page = async () => {
  
   return (

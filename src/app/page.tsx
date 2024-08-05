@@ -4,9 +4,10 @@ import Slider from "@/components/home/slider/slider";
 import { Suspense } from "react";
 import SuggestCarList from "@/components/home/cars/suggestCar";
 
+export const dynamic = 'force-dynamic'
+
 const Home = async () => {
   
-
   return (
     <div className="grid grid-cols-12 p-4 gap-4 ">
       <Slider />
