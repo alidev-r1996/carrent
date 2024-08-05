@@ -3,6 +3,7 @@ import Detail from "@/components/home/details/detail";
 import Slider from "@/components/home/slider/slider";
 import { Suspense } from "react";
 import SuggestCarList from "@/components/home/cars/suggestCar";
+import Loading from "./loading";
 
 export const dynamic = 'force-dynamic'
 
