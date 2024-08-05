@@ -1,4 +1,6 @@
-const cars = [
+import { CarCardProps } from "@/lib/definitions";
+
+const cars: CarCardProps[] = [
   {
     id: "1",
     name: "Koenigsegg",

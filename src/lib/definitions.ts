@@ -3,15 +3,15 @@ import { z } from "zod";
 import { FormState, UseFormRegister } from "react-hook-form";
 
 export type CarCardProps = {
-  id: number;
+  id: number | string;
   name: string;
   type: string;
   img: string;
   fuel: string;
   steering: string;
   capacity: string;
-  price: number;
-  discount: number;
+  price: number | string;
+  discount: number | string;
   isLike: boolean;
   recent: boolean;
   recommend: boolean;
