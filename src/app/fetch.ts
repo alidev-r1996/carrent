@@ -1,5 +1,3 @@
-"use server"
-
 import { CarCardProps } from "@/lib/definitions";
 
 export async function fetchCar(): Promise<CarCardProps[]> {
