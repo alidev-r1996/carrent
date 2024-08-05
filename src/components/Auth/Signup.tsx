@@ -1,3 +1,6 @@
+"use client"
+
+
 import Image from "next/image";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa6";
 import { motion } from "framer-motion";

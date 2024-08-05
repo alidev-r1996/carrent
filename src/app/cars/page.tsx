@@ -4,19 +4,19 @@ import { ArrowsUpDownIcon } from "@heroicons/react/24/outline";
 import { fetchCar } from "../fetch";
 import { CarCardProps } from "../../lib/definitions";
 import BreadCrump from "@/common/breadcrump";
+import { Suspense } from "react";
+import AllCars from "@/components/cars/allcars";
 
 
 const Page = async () => {
-  const carsData: CarCardProps[] = await fetchCar();
+ 
   return (
     <div className="p-4 w-full ">
       <BreadCrump current="Cars"/>
       <Filter />
-      <div className="containerBlur grid grid-cols-1 sm-[min-width:460px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-8">
-        {carsData.map((car) => {
-          return <CarCard {...car} />;
-        })}
-      </div>
+      <Suspense>
+        <AllCars />
+      </Suspense>
     </div>
   );
 };
