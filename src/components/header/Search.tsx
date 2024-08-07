@@ -8,6 +8,8 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Sidebar from "./sidebar/sidebar";
+import { useAppDispatch } from "@/redux/hook";
+import { carSearchAction } from "@/redux/feature/fakeDataActions";
 
 const Search = () => {
   const [search, setSearch] = useState("");
@@ -16,16 +18,18 @@ const Search = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
+  const dispatch = useAppDispatch();
 
   const searchHandler = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
     setSearch(value);
     params.set("search", params.toString());
-    router.push(pathname + "?" + params.toString());
+    router.push('/result' + "?" + params.toString());
     if (value == "" || value == " ") {
       params.delete("search");
       router.push(pathname);
     }
+    dispatch(carSearchAction(value))
   };
 
   return (

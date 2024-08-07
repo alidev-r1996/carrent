@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import { Suspense } from "react";
+import { Toaster } from "react-hot-toast";
+import AppProvider from "./Provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,12 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-main transition-colors duration-200">
-      <body className={``}>
-        <Suspense fallback={<div></div>}>
+      <body>
+        <AppProvider>
           <Header />
-        </Suspense>
-        {children}
-        <Footer />
+          <Toaster />
+          {children}
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

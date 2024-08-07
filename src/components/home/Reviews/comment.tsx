@@ -10,7 +10,7 @@ const ReviewComment: FC<CommentProps> = ({ comment }) => {
   return (
     <>
       <p className="w-16 aspect-square relative">
-        <Image src={avatar} alt="" fill />
+        <Image src={avatar} alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
       </p>
       <div className="flex flex-col text-xs gap-0.5 w-full">
         <div className="flex items-center justify-between">

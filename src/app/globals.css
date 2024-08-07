@@ -26,9 +26,6 @@
   .containerBlur:hover .childBlur:not(:hover) {
     filter: blur(1px);
   }
-  .containerBlur:hover .childBlur {
-    filter: blur(0);
-  }
 }
 
 @layer components {

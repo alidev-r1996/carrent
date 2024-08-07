@@ -11,15 +11,19 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { FC } from "react";
 import { LoginPrps, formFields } from "@/lib/definitions";
 import { LoginSchema } from "@/constants/constant";
+import { useAppDispatch } from "@/redux/hook";
+import { signinUser } from "@/redux/feature/fakeDataActions";
 
 const Signup: FC<LoginPrps> = ({ setStep, step }) => {
+  const dispatch = useAppDispatch();
   const { register, formState, handleSubmit } = useForm<formFields>({
     mode: "onBlur",
     resolver: zodResolver(LoginSchema),
   });
 
-  const onSubmit: SubmitHandler<formFields> = (values: formFields) => {
+  const onSubmit: SubmitHandler<formFields> = async(values: formFields) => {
     console.log(values);
+    await dispatch(signinUser({...values, isLike: [], name: values.name || "Ali"}))
   };
   return (
     <div className="flex flex-col md:flex-row items-center rounded justify-center w-full md:w-2/3 mx-auto h-max p-4">
@@ -42,7 +46,7 @@ const Signup: FC<LoginPrps> = ({ setStep, step }) => {
         >
           LOGIN
         </button>
-        <Image src="/signup.jpg" alt="" fill className="object-fill" />
+        <Image src="/signup.jpg" alt="" fill className="object-fill" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, x: "100%" }}

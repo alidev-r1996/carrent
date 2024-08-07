@@ -31,7 +31,7 @@ const Slider = () => {
             key={slider}
             className="max-w-full h-40 relative rounded overflow-hidden shadow"
           >
-            <Image src={sliderImg[slider]} alt="" fill className="object-fit" />
+            <Image src={sliderImg[slider]} alt="" fill className="object-fit" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
           </motion.div>
         </div>
         <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ const Slider = () => {
                   slider == i && "ring-2 ring-slate-800 ring-offset-2"
                 }`}
               >
-                <Image src={src} alt="" fill className="object-fit" />
+                <Image src={src} alt="" fill className="object-fit" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
               </motion.div>
             );
           })}
