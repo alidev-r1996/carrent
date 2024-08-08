@@ -12,9 +12,14 @@ import { LoginPrps, formFields } from "@/lib/definitions";
 import { LoginSchema } from "@/constants/constant";
 import { useAppDispatch } from "@/redux/hook";
 import { signinUser } from "@/redux/feature/fakeDataActions";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
+
+
 
 const Login: FC<LoginPrps> = ({ setStep, step }) => {
   const dispatch = useAppDispatch();
+  const router =useRouter();
   const { register, formState, handleSubmit } = useForm<formFields>({
     mode: "onBlur",
     resolver: zodResolver(LoginSchema),
@@ -22,7 +27,12 @@ const Login: FC<LoginPrps> = ({ setStep, step }) => {
 
   const onSubmit: SubmitHandler<formFields> = async(values: formFields) => {
     console.log(values);
-    await dispatch(signinUser({...values, name: "Ali", isLike:[]}))
+    try {
+      await dispatch(signinUser({...values, name: "Ali", isLike:[]}))
+      router.push('/')
+    } catch (error) {
+      toast.error("something get wrong!")
+    }
   };
 
   return (

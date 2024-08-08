@@ -51,19 +51,6 @@ const staticDataCar = createSlice({
         state.error = action.error?.message;
       });
     builder
-      .addCase(signoutUser.pending, (state, action) => {
-        state.loading = true;
-      })
-      .addCase(signoutUser.fulfilled, (state, action) => {
-        state.loading = false;
-        state.user = null;
-        toast.success("successfully logout your account!");
-      })
-      .addCase(signoutUser.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
-    builder
       .addCase(addToFavorites.pending, (state, action) => {
         state.loading = true;
       })
@@ -96,20 +83,26 @@ const staticDataCar = createSlice({
       .addCase(carFilterAction.fulfilled, (state, action) => {
         state.loading = false;
 
-        const carType = action.payload.type?.map(c=>c.toLocaleLowerCase())
-        const capacityType = action.payload.capacity?.map(c=>c.toLocaleLowerCase())
-        
-        let capacityfilterCar = state.car.filter(car=>capacityType?.includes(car.capacity.toLowerCase().trim()))
-        console.log(capacityfilterCar)
-        let typefilterCar = state.car.filter(car=>carType?.includes(car.type.toLocaleLowerCase().trim()))
-        
-        state.filterCar = [...capacityfilterCar, ...typefilterCar]
+        const carType = action.payload.type?.map((c) => c.toLocaleLowerCase());
+        const capacityType = action.payload.capacity?.map((c) =>
+          c.toLocaleLowerCase()
+        );
+
+        let capacityfilterCar = state.car.filter((car) =>
+          capacityType?.includes(car.capacity.toLowerCase().trim())
+        );
+        console.log(capacityfilterCar);
+        let typefilterCar = state.car.filter((car) =>
+          carType?.includes(car.type.toLocaleLowerCase().trim())
+        );
+
+        state.filterCar = [...capacityfilterCar, ...typefilterCar];
       })
       .addCase(carFilterAction.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
-      builder
+    builder
       .addCase(carSearchAction.pending, (state, action) => {
         state.loading = true;
       })
@@ -122,6 +115,18 @@ const staticDataCar = createSlice({
         );
       })
       .addCase(carSearchAction.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
+    builder
+      .addCase(signoutUser.pending, (state, action) => {
+        state.loading = true;
+      })
+      .addCase(signoutUser.fulfilled, (state, action) => {
+        state.loading = false;
+        state.user = null;
+      })
+      .addCase(signoutUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
