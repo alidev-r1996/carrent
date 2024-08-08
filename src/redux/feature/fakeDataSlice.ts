@@ -125,6 +125,7 @@ const staticDataCar = createSlice({
       .addCase(signoutUser.fulfilled, (state, action) => {
         state.loading = false;
         state.user = null;
+        toast.success("you successfully logout your account")
       })
       .addCase(signoutUser.rejected, (state, action) => {
         state.loading = false;
