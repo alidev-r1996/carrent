@@ -43,7 +43,7 @@ const CarCard: FC<CarCardProps> = ({
           scale: { duration: 0.2 },
         }}
         viewport={{ once: true }}
-        className="childBlur transition-all h-max duration-300 rounded cursor-pointer shadow p-2 flex flex-col gap-2 text-sm bg-header justify-between w-full max-w-80 min-w-56 sm:min-w-60"
+        className="childBlur transition-all h-max duration-300 rounded cursor-pointer shadow p-2 flex flex-col gap-2 text-sm bg-header justify-between w-full min-w-56 sm:min-w-60"
       >
         <div className="flex items-start justify-between p-2">
           <div className="flex flex-col gap-.5">
