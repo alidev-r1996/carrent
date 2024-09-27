@@ -102,7 +102,7 @@ const CarCard: FC<CarCardProps> = ({
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="bg-blue-600 md:text-xs whitespace-nowrap shadow-[1px_1px_5px_rgba(37,99,235,1)] text-white text-bold sm:py-2 sm:px-4 py-1 px-2 rounded"
+            className="bg-blue-600 md:text-xs whitespace-nowrap shadow-[1px_1px_5px_rgba(37,99,235,0.5)] text-white text-bold sm:py-2 sm:px-4 py-1 px-2 rounded"
           >
             Rent Now
           </motion.button>

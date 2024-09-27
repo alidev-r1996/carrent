@@ -6,7 +6,9 @@ const Page = async() => {
 
 
   return (
-    <Auth />
+    <div className="h-[68vh] flex items-center justify-center">
+      <Auth />
+    </div>
   );
 };
 

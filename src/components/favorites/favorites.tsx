@@ -19,7 +19,7 @@ const Favorites = () => {
 
   if (FavoritesCar.length == 0)
     return (
-      <div className="h-[35vh] w-full bg-white dark:bg-slate-800 rounded shadow p-4">
+      <div className="h-[60vh] w-full bg-white dark:bg-slate-800 rounded shadow p-4">
         <p>Your Favorites Car is Empty!</p>
       </div>
     );

@@ -86,7 +86,7 @@ const Detail = () => {
             </p>
             <p className="text-slate-500 text-sm w-full line-through ">$100.00</p>
           </div>
-          <motion.button whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} transition={{duration: 0.2}} className="bg-blue-600 text-xs md:text-sm shadow-[1px_1px_5px_rgba(37,99,235,1)] whitespace-nowrap text-white text-bold py-2 px-4 rounded">
+          <motion.button whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} transition={{duration: 0.2}} className="bg-blue-600 text-xs md:text-sm shadow-[1px_1px_5px_rgba(37,99,235,0.6)] whitespace-nowrap text-white text-bold py-2 px-4 rounded">
             Rent Now
           </motion.button>
         </motion.div>

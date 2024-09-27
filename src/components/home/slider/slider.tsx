@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-const sliderImg = ["/02.png", "/02-02.png", "/02-03.png"];
+const sliderImg = ["/main-slider.jpg", "/02-02.png", "/02-03.png"];
 
 const Slider = () => {
   const [slider, setSlider] = useState(0);
@@ -29,9 +29,9 @@ const Slider = () => {
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
             key={slider}
-            className="max-w-full h-40 relative rounded overflow-hidden shadow"
+            className="max-w-full h-60 relative rounded overflow-hidden shadow"
           >
-            <Image src={sliderImg[slider]} alt="" fill className="object-fit" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+            <Image src={sliderImg[slider]} alt="" fill className="object-fit aspect-square" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"/>
           </motion.div>
         </div>
         <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ const Slider = () => {
                 transition={{ duration: 0.2, delay: 0.2 }}
                 key={i}
                 onClick={() => setSlider(i)}
-                className={`w-1/3 bg-slate-600 aspect-square rounded overflow-hidden cursor-pointer relative ${
+                className={`w-1/3 bg-slate-600 h-20 rounded overflow-hidden cursor-pointer relative ${
                   slider == i && "ring-2 ring-slate-800 ring-offset-2"
                 }`}
               >

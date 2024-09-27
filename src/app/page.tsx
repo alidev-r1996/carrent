@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 const Home = async () => {
   
   return (
-    <div className="grid grid-cols-12 p-4 gap-4 ">
+    <div className="grid grid-cols-12 p-4 gap-4">
       <Slider />
       <Detail />
       <Review />

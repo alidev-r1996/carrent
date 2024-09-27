@@ -2,7 +2,7 @@ import { footerTitle } from "@/constants/constant";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col p-4 md:p-8 bg-header/90 dark:shadow-[0px_-2px_4px_rgba(0,0,0,0.8)]  shadow-[-1px_-1px_2px_rgba(0,0,0,0.1)]">
+    <div className="flex flex-col max-h-max p-4 md:p-8 bg-header/90 static bottom-0 w-full dark:shadow-[0px_-2px_4px_rgba(0,0,0,0.8)]  shadow-[-1px_-1px_2px_rgba(0,0,0,0.1)]">
       <div className="flex pb-4 flex-col gap-6 md:gap-0 md:flex-row items-start justify-between border-b dark:border-b-slate-600">
         <div className="flex flex-col">
           <h1 className="uppercase mt-4 text-blue-700 font-bold text-lg md:text-[32px] text-LogoColor">

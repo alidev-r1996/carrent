@@ -63,7 +63,7 @@ const sideFilter = {
 const parentVariants = {
   hidden: {
     opacity: 0,
-    x: "-100vw",
+    x: "-50vw",
     transition: {
       staggerChildren: 0.3,
     },

@@ -9,6 +9,9 @@ const config: Config = {
     "./src/common/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
         icon: "rgba(var(--icon-color))",

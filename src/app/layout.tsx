@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-main transition-colors duration-200">
-      <body>
+    <html lang="en" className="bg-main flex justify-center w-full">
+      <body className="mx-auto max-w-screen-xl w-full bg-main transition-colors duration-200">
         <AppProvider>
           <Header />
           <Toaster />

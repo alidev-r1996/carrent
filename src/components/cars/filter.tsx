@@ -23,11 +23,12 @@ const Filter = () => {
 
   const dropoffHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setDropoff({ ...pickup, [name]: [value] });
+    setDropoff({ ...dropoff, [name]: [value] });
   };
 
   const swapHandler = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+    setDropoff(pickup)
+    setPickup(dropoff)
   };
 
   return (
